@@ -1,0 +1,5 @@
+# Wersja demonstracyjna: każda podstrona ma znacznik <meta name="robots" content="noindex, nofollow">.
+# Roboty muszą móc pobrać strony, aby ten znacznik odczytać, dlatego niczego tu nie blokujemy.
+# Uwaga: robots.txt działa tylko w katalogu głównym domeny (nie w podkatalogu projektu GitHub Pages).
+User-agent: *
+Disallow:

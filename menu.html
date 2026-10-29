@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw='; style-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Menu i ceny — SIELORA Kuchnia Sezonowa</title>
+  <meta name="description" content="Pełna karta jesienna restauracji SIELORA z cenami, składem i 14 alergenami. Filtruj dania według kategorii, diety wegetariańskiej lub wegańskiej i alergenów.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#242521">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="SIELORA — Kuchnia Sezonowa">
+  <meta property="og:title" content="Menu i ceny — SIELORA">
+  <meta property="og:description" content="Pełna karta jesienna restauracji SIELORA z cenami, składem i 14 alergenami. Filtruj dania według kategorii, diety wegetariańskiej lub wegańskiej i alergenów.">
+  <meta property="og:image" content="assets/images/branding/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo SIELORA i ilustracja talerza z jesiennym daniem na ciemnozielonym tle">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/images/branding/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/images/branding/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/menu-data.js" defer></script>
+  <script src="assets/js/menu.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#tresc">Przejdź do treści</a>
+  <aside class="demo-bar" aria-label="Informacja o projekcie">
+    <p class="container">Projekt demonstracyjny. Restauracja i&nbsp;dane kontaktowe są fikcyjne.</p>
+  </aside>
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/branding/logo.svg" alt="SIELORA — Kuchnia Sezonowa, strona główna" width="229" height="52">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nawigacja" data-nav-toggle>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path class="nav-toggle__line nav-toggle__line--top" d="M4 7h16"/><path class="nav-toggle__line nav-toggle__line--middle" d="M4 12h16"/><path class="nav-toggle__line nav-toggle__line--bottom" d="M4 17h16"/></svg>
+        <span class="visually-hidden">Nawigacja</span>
+      </button>
+      <nav class="site-nav" id="nawigacja" aria-label="Główna">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="menu.html" aria-current="page">Menu</a></li>
+          <li><a class="site-nav__link" href="o-nas.html">O&nbsp;nas</a></li>
+          <li><a class="site-nav__link" href="faq.html">FAQ</a></li>
+          <li><a class="site-nav__link" href="kontakt.html">Kontakt</a></li>
+          <li class="site-nav__cta"><a class="button" href="rezerwacje.html">Rezerwuj stolik</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="tresc" tabindex="-1">
+    <section class="page-intro theme-dark" aria-labelledby="menu-tytul">
+      <div class="container page-intro__inner">
+        <h1 id="menu-tytul">Menu</h1>
+        <p class="lead">Karta jesienna, od września do listopada. Przy każdej pozycji podajemy cenę, skład i&nbsp;alergeny. Kartę możesz przeglądać według kategorii, diety i&nbsp;alergenów.</p>
+      </div>
+    </section>
+
+    <div class="section section--snug">
+      <div class="container stack stack--xl">
+        <p class="notice"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.2M12 7.8h.01"/></svg><span><strong>Dane demonstracyjne.</strong> Skład, alergeny i&nbsp;oznaczenia diet podaliśmy przykładowo, na potrzeby projektu. Przed użyciem w&nbsp;prawdziwej restauracji trzeba je sprawdzić z&nbsp;rzeczywistymi recepturami. Ceny są cenami brutto w&nbsp;złotych.</span></p>
+        <div class="menu-layout" data-menu data-menu-version="eb8bfef1">
+          <!-- MENU-FILTERS:START -->
+          <form class="menu-filters" data-menu-filters aria-labelledby="filtry-tytul">
+            <h2 class="menu-filters__title" id="filtry-tytul">Filtruj kartę</h2>
+            <fieldset class="filter-group">
+              <legend>Kategoria</legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="kategoria" id="filtr-kategoria-wszystko" value="wszystko" checked><span>Całe menu</span></label>
+                <label class="chip"><input type="radio" name="kategoria" id="filtr-kategoria-przystawki" value="przystawki"><span>Przystawki</span></label>
+                <label class="chip"><input type="radio" name="kategoria" id="filtr-kategoria-dania-glowne" value="dania-glowne"><span>Dania główne</span></label>
+                <label class="chip"><input type="radio" name="kategoria" id="filtr-kategoria-makarony" value="makarony"><span>Makarony i&nbsp;dania mączne</span></label>
+                <label class="chip"><input type="radio" name="kategoria" id="filtr-kategoria-desery" value="desery"><span>Desery</span></label>
+                <label class="chip"><input type="radio" name="kategoria" id="filtr-kategoria-napoje" value="napoje"><span>Napoje</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="filter-group">
+              <legend>Dieta</legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="dieta" id="filtr-dieta-wszystkie" value="wszystkie" checked><span>Bez ograniczeń</span></label>
+                <label class="chip"><input type="radio" name="dieta" id="filtr-dieta-vegetarian" value="vegetarian"><span>Wegetariańskie</span></label>
+                <label class="chip"><input type="radio" name="dieta" id="filtr-dieta-vegan" value="vegan"><span>Wegańskie</span></label>
+              </div>
+            </fieldset>
+            <details class="filter-group filter-group--allergens">
+              <summary>Ukryj alergeny<span data-allergen-count></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <fieldset>
+                <legend>Ukryj pozycje, które zawierają:</legend>
+                <div class="checks">
+                  <label class="check"><input type="checkbox" name="alergen" id="filtr-alergen-gluten" value="gluten"><span class="check__no" aria-hidden="true">1</span>Gluten</label>
+                  <label class="check"><input type="checkbox" name="alergen" id="filtr-alergen-crustaceans" value="crustaceans"><span class="check__no" aria-hidden="true">2</span>Skorupiaki</label>
+                  <label class="check"><input type="checkbox" name="alergen" id="filtr-alergen-eggs" value="eggs"><span class="check__no" aria-hidden="true">3</span>Jaja</label>
+                  <label class="check"><input type="checkbox" name="alergen" id="filtr-alergen-fish" value="fish"><span class="check__no" aria-hidden="true">4</span>Ryby</label>
+                  <label class="check"><input type="checkbox" name="alergen" id="filtr-alergen-peanuts" value="peanuts"><span class="check__no" aria-hidden="true">5</span>Orzeszki ziemne</label>
+                  <label class="check"><input type="checkbox" name="alergen" id="filtr-alergen-soy" value="soy"><span class="check__no" aria-hidden="true">6</span>Soja</label>
+                  <label class="check"><input type="checkbox" name="alergen" id="filtr-alergen-milk" value="milk"><span class="check__no" aria-hidden="true">7</span>Mleko</label>
+                  <label class="check"><input type="checkbox" name="alergen" id="filtr-alergen-nuts" value="nuts"><span class="check__no" aria-hidden="true">8</span>Orzechy</label>
+                  <label class="check"><input type="checkbox" name="alergen" id="filtr-alergen-celery" value="celery"><span class="check__no" aria-hidden="true">9</span>Seler</label>
+                  <label class="check"><input type="checkbox" name="alergen" id="filtr-alergen-mustard" value="mustard"><span class="check__no" aria-hidden="true">10</span>Gorczyca</label>
+                  <label class="check"><input type="checkbox" name="alergen" id="filtr-alergen-sesame" value="sesame"><span class="check__no" aria-hidden="true">11</span>Sezam</label>
+                  <label class="check"><input type="checkbox" name="alergen" id="filtr-alergen-sulphites" value="sulphites"><span class="check__no" aria-hidden="true">12</span>Siarczyny</label>
+                  <label class="check"><input type="checkbox" name="alergen" id="filtr-alergen-lupin" value="lupin"><span class="check__no" aria-hidden="true">13</span>Łubin</label>
+                  <label class="check"><input type="checkbox" name="alergen" id="filtr-alergen-molluscs" value="molluscs"><span class="check__no" aria-hidden="true">14</span>Mięczaki</label>
+                </div>
+                <p class="filter-note">Filtr opiera się na składzie podanym w&nbsp;karcie. W&nbsp;kuchni pracujemy ze wszystkimi alergenami z&nbsp;wykazu, dlatego przy alergii zawsze poinformuj obsługę.</p>
+              </fieldset>
+            </details>
+            <button type="reset" class="button button--ghost button--small">Wyczyść filtry</button>
+          </form>
+          <!-- MENU-FILTERS:END -->
+          <div class="menu-content">
+            <p class="menu-status" role="status" data-menu-status>Widoczne pozycje: 24 z&nbsp;24.</p>
+            <div class="menu-empty" data-menu-empty hidden>
+              <p>Żadna pozycja nie spełnia wybranych warunków.</p>
+              <button type="button" class="button button--ghost button--small" data-menu-reset>Wyczyść filtry</button>
+            </div>
+            <div class="menu-list" data-menu-list>
+              <!-- MENU-LIST:START -->
+              <section class="menu-category" id="kategoria-przystawki" data-category-section="przystawki" aria-labelledby="kategoria-przystawki-tytul">
+                <div class="menu-category__head">
+                  <h2 id="kategoria-przystawki-tytul">Przystawki</h2>
+                  <p class="menu-category__desc">Na początek, do podziału albo dla jednej osoby.</p>
+                </div>
+                <ul class="dishes">
+                  <li class="dish" id="focaccia-z-oliwa-ziolowa" data-category="przystawki" data-diet="vegan" data-allergens="gluten">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Focaccia z&nbsp;oliwą ziołową</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="18">18&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Pieczona każdego ranka na długo wyrastającym cieście, z&nbsp;chrupiącą skórką i&nbsp;miękkim środkiem. Podajemy ją ciepłą, z&nbsp;oliwą aromatyzowaną rozmarynem i&nbsp;tymiankiem.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> mąka pszenna, oliwa z&nbsp;oliwek extra virgin, drożdże, sól morska, rozmaryn, tymianek, czosnek</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegańskie</p>
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">1</span>Gluten</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="krem-z-pieczonych-pomidorow" data-category="przystawki" data-diet="vegetarian" data-allergens="celery milk">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Krem z&nbsp;pieczonych pomidorów</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="25">25&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Pomidory i&nbsp;czerwoną paprykę pieczemy do lekkiego przypieczenia, a&nbsp;potem miksujemy na gładko z&nbsp;bulionem warzywnym. Na wierzchu kleks śmietany, oliwa bazyliowa i&nbsp;prażone pestki dyni.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> pomidory, czerwona papryka, cebula, czosnek, bulion warzywny z&nbsp;selerem, śmietana 18%, oliwa z&nbsp;oliwek, bazylia, pestki dyni</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegetariańskie</p>
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">7</span>Mleko</li><li class="allergen"><span class="allergen__no" aria-hidden="true">9</span>Seler</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="burrata-z-pomidorami" data-category="przystawki" data-diet="vegetarian" data-allergens="milk sulphites">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Burrata z&nbsp;pomidorami</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="39">39&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Kremowa burrata na pomidorach malinowych i&nbsp;koktajlowych, skropiona zieloną oliwą i&nbsp;redukcją z&nbsp;octu balsamicznego. Do tego listki bazylii i&nbsp;szczypta soli morskiej.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> burrata (podpuszczka mikrobiologiczna), pomidory malinowe, pomidory koktajlowe, oliwa z&nbsp;oliwek extra virgin, redukcja z&nbsp;octu balsamicznego, bazylia, sól morska</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegetariańskie</p>
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">7</span>Mleko</li><li class="allergen"><span class="allergen__no" aria-hidden="true">12</span>Siarczyny</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="tatar-z-pieczonego-buraka" data-category="przystawki" data-diet="vegan" data-allergens="gluten mustard nuts sulphites">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Tatar z&nbsp;pieczonego buraka</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="32">32&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Buraki pieczone w&nbsp;soli siekamy jak klasyczny tatar i&nbsp;doprawiamy szalotką, kaparami, musztardą Dijon i&nbsp;chrzanem. Podajemy z&nbsp;prażonymi orzechami włoskimi i&nbsp;chrupkim pieczywem żytnim.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> pieczony burak, szalotka, kapary, musztarda Dijon, chrzan, oliwa z&nbsp;oliwek, koperek, orzechy włoskie, pieczywo żytnie</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegańskie</p>
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">1</span>Gluten</li><li class="allergen"><span class="allergen__no" aria-hidden="true">8</span>Orzechy</li><li class="allergen"><span class="allergen__no" aria-hidden="true">10</span>Gorczyca</li><li class="allergen"><span class="allergen__no" aria-hidden="true">12</span>Siarczyny</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="krewetki-z-czosnkiem-i-cytryna" data-category="przystawki" data-diet="" data-allergens="crustaceans milk sulphites gluten">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Krewetki z&nbsp;czosnkiem i&nbsp;cytryną</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="46">46&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Krewetki smażone krótko na maśle z&nbsp;czosnkiem, chili i&nbsp;natką pietruszki, z&nbsp;odrobiną białego wina i&nbsp;soku z&nbsp;cytryny. Sos najlepiej zebrać kawałkiem focaccii, którą podajemy obok.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> krewetki tygrysie, masło, czosnek, papryczka chili, białe wino, cytryna, natka pietruszki, focaccia</p>
+                    <div class="dish__meta">
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">1</span>Gluten</li><li class="allergen"><span class="allergen__no" aria-hidden="true">2</span>Skorupiaki</li><li class="allergen"><span class="allergen__no" aria-hidden="true">7</span>Mleko</li><li class="allergen"><span class="allergen__no" aria-hidden="true">12</span>Siarczyny</li></ul></div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+              <section class="menu-category" id="kategoria-dania-glowne" data-category-section="dania-glowne" aria-labelledby="kategoria-dania-glowne-tytul">
+                <div class="menu-category__head">
+                  <h2 id="kategoria-dania-glowne-tytul">Dania główne</h2>
+                  <p class="menu-category__desc">Mięso, ryba i&nbsp;warzywa w&nbsp;roli głównej, z&nbsp;dodatkami z&nbsp;bieżącego sezonu.</p>
+                </div>
+                <ul class="dishes">
+                  <li class="dish" id="risotto-z-borowikami" data-category="dania-glowne" data-diet="vegetarian" data-allergens="milk celery sulphites">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Risotto z&nbsp;borowikami</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="57">57&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Ryż carnaroli gotowany powoli na bulionie warzywnym, z&nbsp;podsmażonymi borowikami, tymiankiem i&nbsp;dojrzewającym serem. Na koniec dodajemy masło, żeby risotto było kremowe, ale nie ciężkie.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> ryż carnaroli, borowiki, szalotka, białe wino, bulion warzywny z&nbsp;selerem, masło, ser dojrzewający (podpuszczka mikrobiologiczna), tymianek, natka pietruszki</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegetariańskie</p>
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">7</span>Mleko</li><li class="allergen"><span class="allergen__no" aria-hidden="true">9</span>Seler</li><li class="allergen"><span class="allergen__no" aria-hidden="true">12</span>Siarczyny</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="piers-z-kurczaka-z-puree" data-category="dania-glowne" data-diet="" data-allergens="milk celery">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Pierś z&nbsp;kurczaka z&nbsp;puree</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="62">62&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Pierś z&nbsp;kurczaka pieczona ze skórą, podana na maślanym puree ziemniaczanym, z&nbsp;glazurowaną marchewką i&nbsp;sosem z&nbsp;pieczenia z&nbsp;tymiankiem.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> pierś z&nbsp;kurczaka, ziemniaki, masło, mleko, marchew, miód, sos z&nbsp;pieczenia na wywarze z&nbsp;selerem, tymianek</p>
+                    <div class="dish__meta">
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">7</span>Mleko</li><li class="allergen"><span class="allergen__no" aria-hidden="true">9</span>Seler</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="poledwiczka-wieprzowa-z-rozmarynem" data-category="dania-glowne" data-diet="" data-allergens="milk mustard sulphites">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Polędwiczka wieprzowa z&nbsp;rozmarynem</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="69">69&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Polędwiczka pieczona z&nbsp;rozmarynem i&nbsp;czosnkiem, krojona w&nbsp;grube medaliony. Podajemy ją z&nbsp;pieczonym jabłkiem, ziemniakami z&nbsp;pieca i&nbsp;kremowym sosem musztardowym.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> polędwiczka wieprzowa, rozmaryn, czosnek, jabłka, ziemniaki, śmietanka 30%, musztarda ziarnista, białe wino</p>
+                    <div class="dish__meta">
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">7</span>Mleko</li><li class="allergen"><span class="allergen__no" aria-hidden="true">10</span>Gorczyca</li><li class="allergen"><span class="allergen__no" aria-hidden="true">12</span>Siarczyny</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="pstrag-pieczony-z-warzywami" data-category="dania-glowne" data-diet="" data-allergens="fish milk celery">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Pstrąg pieczony z&nbsp;warzywami</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="74">74&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Filet z&nbsp;pstrąga pieczony z&nbsp;masłem ziołowym i&nbsp;cytryną. Podajemy go na pieczonej marchwi, pietruszce i&nbsp;selerze korzeniowym.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> filet z&nbsp;pstrąga, masło, koperek, natka pietruszki, cytryna, marchew, korzeń pietruszki, seler korzeniowy, oliwa z&nbsp;oliwek</p>
+                    <div class="dish__meta">
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">4</span>Ryby</li><li class="allergen"><span class="allergen__no" aria-hidden="true">7</span>Mleko</li><li class="allergen"><span class="allergen__no" aria-hidden="true">9</span>Seler</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="stek-z-kalafiora-z-sosem-tahini" data-category="dania-glowne" data-diet="vegan" data-allergens="sesame">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Stek z&nbsp;kalafiora z&nbsp;sosem tahini</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="52">52&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Gruby plaster kalafiora pieczony w&nbsp;wysokiej temperaturze, aż zbrązowieje na brzegach. Podajemy go z&nbsp;sosem tahini, prażoną ciecierzycą, granatem i&nbsp;natką.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> kalafior, pasta tahini, cytryna, czosnek, ciecierzyca, granat, natka pietruszki, oliwa z&nbsp;oliwek, kumin, wędzona papryka</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegańskie</p>
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">11</span>Sezam</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="wolno-duszona-wolowina" data-category="dania-glowne" data-diet="" data-allergens="celery sulphites milk">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Wolno duszona wołowina</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="78">78&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Policzki wołowe duszone przez kilka godzin w&nbsp;czerwonym winie z&nbsp;warzywami korzeniowymi, aż mięso rozpada się pod widelcem. Podajemy z&nbsp;puree z&nbsp;pasternaku i&nbsp;glazurowanymi szalotkami.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> policzki wołowe, czerwone wino, marchew, seler korzeniowy, cebula, czosnek, liść laurowy, pasternak, masło, szalotki</p>
+                    <div class="dish__meta">
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">7</span>Mleko</li><li class="allergen"><span class="allergen__no" aria-hidden="true">9</span>Seler</li><li class="allergen"><span class="allergen__no" aria-hidden="true">12</span>Siarczyny</li></ul></div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+              <section class="menu-category" id="kategoria-makarony" data-category-section="makarony" aria-labelledby="kategoria-makarony-tytul">
+                <div class="menu-category__head">
+                  <h2 id="kategoria-makarony-tytul">Makarony i&nbsp;dania mączne</h2>
+                  <p class="menu-category__desc">Makarony, ravioli i&nbsp;gnocchi przygotowujemy na miejscu, każdego dnia.</p>
+                </div>
+                <ul class="dishes">
+                  <li class="dish" id="tagliatelle-z-pesto-bazyliowym" data-category="makarony" data-diet="vegetarian" data-allergens="gluten eggs milk">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Tagliatelle z&nbsp;pesto bazyliowym</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="51">51&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Świeże tagliatelle na jajach, wymieszane z&nbsp;pesto z&nbsp;bazylii, orzeszków piniowych i&nbsp;dojrzewającego sera. Podajemy z&nbsp;pomidorkami confit i&nbsp;świeżą bazylią.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> mąka pszenna, jaja, bazylia, orzeszki piniowe, ser dojrzewający (podpuszczka mikrobiologiczna), oliwa z&nbsp;oliwek extra virgin, czosnek, pomidorki koktajlowe</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegetariańskie</p>
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">1</span>Gluten</li><li class="allergen"><span class="allergen__no" aria-hidden="true">3</span>Jaja</li><li class="allergen"><span class="allergen__no" aria-hidden="true">7</span>Mleko</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="ravioli-z-ricotta-i-szpinakiem" data-category="makarony" data-diet="vegetarian" data-allergens="gluten eggs milk nuts">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Ravioli z&nbsp;ricottą i&nbsp;szpinakiem</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="55">55&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Ręcznie lepione ravioli z&nbsp;nadzieniem z&nbsp;ricotty, szpinaku i&nbsp;gałki muszkatołowej. Podajemy z&nbsp;masłem szałwiowym, prażonymi orzechami laskowymi i&nbsp;tartym serem.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> mąka pszenna, jaja, ricotta, szpinak, ser dojrzewający (podpuszczka mikrobiologiczna), gałka muszkatołowa, masło, szałwia, orzechy laskowe</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegetariańskie</p>
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">1</span>Gluten</li><li class="allergen"><span class="allergen__no" aria-hidden="true">3</span>Jaja</li><li class="allergen"><span class="allergen__no" aria-hidden="true">7</span>Mleko</li><li class="allergen"><span class="allergen__no" aria-hidden="true">8</span>Orzechy</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="gnocchi-z-pieczona-dynia" data-category="makarony" data-diet="vegan" data-allergens="gluten">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Gnocchi z&nbsp;pieczoną dynią</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="49">49&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Ziemniaczane gnocchi z&nbsp;karmelizowaną dynią hokkaido, chrupiącą szałwią i&nbsp;prażonymi pestkami dyni, polane oliwą ze skórką cytryny. Danie w&nbsp;całości roślinne.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> ziemniaki, mąka pszenna, dynia hokkaido, szałwia, pestki dyni, oliwa z&nbsp;oliwek, czosnek, skórka z&nbsp;cytryny</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegańskie</p>
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">1</span>Gluten</li></ul></div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+              <section class="menu-category" id="kategoria-desery" data-category-section="desery" aria-labelledby="kategoria-desery-tytul">
+                <div class="menu-category__head">
+                  <h2 id="kategoria-desery-tytul">Desery</h2>
+                  <p class="menu-category__desc">Pieczone i&nbsp;schładzane u&nbsp;nas, w&nbsp;niewielkich porcjach na każdy dzień.</p>
+                </div>
+                <ul class="dishes">
+                  <li class="dish" id="sernik-waniliowy" data-category="desery" data-diet="vegetarian" data-allergens="milk eggs gluten">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Sernik waniliowy</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="29">29&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Gęsty, kremowy sernik z&nbsp;laską wanilii na kruchym, maślanym spodzie. Podajemy go schłodzonego, z&nbsp;odrobiną skórki cytrynowej.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> twaróg, jaja, cukier, laska wanilii, masło, mąka pszenna, skórka z&nbsp;cytryny</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegetariańskie</p>
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">1</span>Gluten</li><li class="allergen"><span class="allergen__no" aria-hidden="true">3</span>Jaja</li><li class="allergen"><span class="allergen__no" aria-hidden="true">7</span>Mleko</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="mus-czekoladowy" data-category="desery" data-diet="vegetarian" data-allergens="eggs milk soy nuts">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Mus czekoladowy</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="28">28&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Puszysty mus z&nbsp;gorzkiej czekolady z&nbsp;kryształkami soli morskiej. Podajemy go z&nbsp;bitą śmietaną i&nbsp;kruszonką z&nbsp;orzechów laskowych.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> gorzka czekolada 70% z&nbsp;lecytyną sojową, jaja, śmietanka 30%, cukier, sól morska, orzechy laskowe</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegetariańskie</p>
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">3</span>Jaja</li><li class="allergen"><span class="allergen__no" aria-hidden="true">6</span>Soja</li><li class="allergen"><span class="allergen__no" aria-hidden="true">7</span>Mleko</li><li class="allergen"><span class="allergen__no" aria-hidden="true">8</span>Orzechy</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="panna-cotta-z-owocami" data-category="desery" data-diet="" data-allergens="milk">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Panna cotta z&nbsp;owocami</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="27">27&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Delikatna panna cotta z&nbsp;wanilią, podana z&nbsp;pieczoną gruszką i&nbsp;jeżynami. Owoce zmieniamy razem z&nbsp;sezonem.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> śmietanka 30%, mleko, cukier, wanilia, żelatyna wieprzowa, gruszka, jeżyny</p>
+                    <div class="dish__meta">
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">7</span>Mleko</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="sorbet-sezonowy" data-category="desery" data-diet="vegan" data-allergens="">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Sorbet sezonowy</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="23">23&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Lekki sorbet bez nabiału, przygotowywany z&nbsp;owoców, które akurat są w&nbsp;sezonie. Tej jesieni robimy go z&nbsp;gruszek i&nbsp;pigwy.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> przecier z&nbsp;gruszek, pigwa, cukier, woda, sok z&nbsp;cytryny</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegańskie</p>
+                      <p class="dish__allergens"><span class="dish__label">Alergeny:</span> brak alergenów z wykazu UE</p>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+              <section class="menu-category" id="kategoria-napoje" data-category-section="napoje" aria-labelledby="kategoria-napoje-tytul">
+                <div class="menu-category__head">
+                  <h2 id="kategoria-napoje-tytul">Napoje</h2>
+                  <p class="menu-category__desc">Kawa, herbata i&nbsp;napoje bezalkoholowe.</p>
+                </div>
+                <ul class="dishes">
+                  <li class="dish" id="espresso" data-category="napoje" data-diet="vegan" data-allergens="">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Espresso</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="12">12&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Krótkie, intensywne espresso z&nbsp;ziaren arabiki, z&nbsp;nutą kakao i&nbsp;suszonych owoców.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> kawa 100% arabika</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegańskie</p>
+                      <p class="dish__allergens"><span class="dish__label">Alergeny:</span> brak alergenów z wykazu UE</p>
+                    </div>
+                  </li>
+                  <li class="dish" id="flat-white" data-category="napoje" data-diet="vegetarian" data-allergens="milk">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Flat white</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="17">17&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Podwójne espresso z&nbsp;cienką warstwą aksamitnie spienionego mleka.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> podwójne espresso, mleko krowie</p>
+                    <p class="dish__note">Na życzenie przygotujemy je na napoju owsianym. Ta wersja nie zawiera mleka, ale może zawierać gluten.</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegetariańskie</p>
+                      <div class="dish__allergens"><span class="dish__label">Alergeny:</span><ul><li class="allergen"><span class="allergen__no" aria-hidden="true">7</span>Mleko</li></ul></div>
+                    </div>
+                  </li>
+                  <li class="dish" id="herbata-lisciasta" data-category="napoje" data-diet="vegan" data-allergens="">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Herbata liściasta</h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="15">15&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Herbata parzona z&nbsp;całych liści w&nbsp;dzbanku. Do wyboru mamy czarną, zieloną i&nbsp;napar ziołowy, a&nbsp;aktualny wybór poda obsługa.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> herbata liściasta lub mieszanka ziół</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegańskie</p>
+                      <p class="dish__allergens"><span class="dish__label">Alergeny:</span> brak alergenów z wykazu UE</p>
+                    </div>
+                  </li>
+                  <li class="dish" id="lemoniada-domowa" data-category="napoje" data-diet="vegan" data-allergens="">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Lemoniada domowa <span class="dish__portion">400 ml</span></h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="19">19&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Lemoniada na świeżo wyciskanych cytrynach, słodzona syropem z&nbsp;trzciny cukrowej, z&nbsp;miętą i&nbsp;plasterkami imbiru.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> woda, sok z&nbsp;cytryn, syrop z&nbsp;trzciny cukrowej, mięta, imbir</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegańskie</p>
+                      <p class="dish__allergens"><span class="dish__label">Alergeny:</span> brak alergenów z wykazu UE</p>
+                    </div>
+                  </li>
+                  <li class="dish" id="woda-mineralna" data-category="napoje" data-diet="vegan" data-allergens="">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Woda mineralna <span class="dish__portion">330 ml</span></h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="9">9&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Niegazowana lub gazowana, podawana schłodzona.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> woda mineralna</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegańskie</p>
+                      <p class="dish__allergens"><span class="dish__label">Alergeny:</span> brak alergenów z wykazu UE</p>
+                    </div>
+                  </li>
+                  <li class="dish" id="herbata-mrozona" data-category="napoje" data-diet="vegan" data-allergens="">
+                    <div class="dish__head">
+                      <h3 class="dish__name">Herbata mrożona <span class="dish__portion">400 ml</span></h3>
+                      <span class="dish__dots" aria-hidden="true"></span>
+                      <p class="dish__price"><data value="18">18&nbsp;zł</data></p>
+                    </div>
+                    <p class="dish__desc">Zimny napar z&nbsp;czarnej herbaty z&nbsp;pieczonym jabłkiem, cytryną i&nbsp;odrobiną cynamonu, słodzony z&nbsp;umiarem.</p>
+                    <p class="dish__ingredients"><span class="dish__label">Skład:</span> czarna herbata, jabłko, cytryna, cynamon, cukier trzcinowy</p>
+                    <div class="dish__meta">
+                      <p class="dish__diet"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="m5 19 8-8"/></svg>Wegańskie</p>
+                      <p class="dish__allergens"><span class="dish__label">Alergeny:</span> brak alergenów z wykazu UE</p>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+              <!-- MENU-LIST:END -->
+            </div>
+            <details class="allergen-legend" data-menu-legend>
+              <!-- MENU-LEGEND:START -->
+              <summary>Wykaz 14 alergenów</summary>
+              <ol>
+                <li><strong>Gluten</strong>. Zboża zawierające gluten: pszenica (w&nbsp;tym orkisz i&nbsp;pszenica khorasan), żyto, jęczmień, owies oraz produkty pochodne</li>
+                <li><strong>Skorupiaki</strong>. Skorupiaki i&nbsp;produkty pochodne</li>
+                <li><strong>Jaja</strong>. Jaja i&nbsp;produkty pochodne</li>
+                <li><strong>Ryby</strong>. Ryby i&nbsp;produkty pochodne</li>
+                <li><strong>Orzeszki ziemne</strong>. Orzeszki ziemne (arachidowe) i&nbsp;produkty pochodne</li>
+                <li><strong>Soja</strong>. Soja i&nbsp;produkty pochodne</li>
+                <li><strong>Mleko</strong>. Mleko i&nbsp;produkty pochodne (łącznie z&nbsp;laktozą)</li>
+                <li><strong>Orzechy</strong>. Orzechy: migdały, laskowe, włoskie, nerkowca, pekan, brazylijskie, pistacjowe, makadamia oraz produkty pochodne</li>
+                <li><strong>Seler</strong>. Seler i&nbsp;produkty pochodne</li>
+                <li><strong>Gorczyca</strong>. Gorczyca i&nbsp;produkty pochodne</li>
+                <li><strong>Sezam</strong>. Nasiona sezamu i&nbsp;produkty pochodne</li>
+                <li><strong>Siarczyny</strong>. Dwutlenek siarki i&nbsp;siarczyny w&nbsp;stężeniu powyżej 10 mg/kg lub 10 mg/l w&nbsp;przeliczeniu na SO₂</li>
+                <li><strong>Łubin</strong>. Łubin i&nbsp;produkty pochodne</li>
+                <li><strong>Mięczaki</strong>. Mięczaki i&nbsp;produkty pochodne</li>
+              </ol>
+              <!-- MENU-LEGEND:END -->
+            </details>
+            <div class="menu-notes">
+              <p>Oznaczenie „Wegetariańskie” dotyczy dań bez mięsa, ryb i&nbsp;owoców morza. Sery w&nbsp;tych daniach są wytwarzane z&nbsp;podpuszczką mikrobiologiczną. Oznaczenie „Wegańskie” dotyczy pozycji bez składników pochodzenia zwierzęcego.</p>
+              <p>Masz alergię lub nietolerancję pokarmową? Powiedz o&nbsp;niej obsłudze przed zamówieniem. W&nbsp;kuchni pracujemy ze wszystkimi 14&nbsp;alergenami, więc nie możemy wykluczyć śladowych ilości w&nbsp;żadnym daniu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section theme-dark" aria-labelledby="zaproszenie-tytul">
+      <div class="container cta-band__inner">
+        <div class="stack">
+          <h2 id="zaproszenie-tytul">Zarezerwuj stolik</h2>
+          <p class="lead">Najwięcej osób odwiedza nas w&nbsp;piątki i&nbsp;soboty wieczorem. W&nbsp;te dni warto zarezerwować stolik z&nbsp;wyprzedzeniem.</p>
+        </div>
+        <div class="button-row">
+          <a class="button button--light" href="rezerwacje.html">Przejdź do rezerwacji</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <img src="assets/images/branding/logo-inverse.svg" alt="SIELORA — Kuchnia Sezonowa" width="229" height="52" loading="lazy" decoding="async">
+        <p>Współczesna kuchnia europejska z&nbsp;sezonowych składników. Kolacje we dwoje, rodzinne obiady i&nbsp;kameralne uroczystości.</p>
+      </div>
+      <div>
+        <h2 class="site-footer__title">Adres</h2>
+        <address>
+          ul.&nbsp;Jesionowa 17<br>
+          00-000 Miasto Pokazowe<br>
+          <a class="email" href="mailto:kontakt@sielora.example">kontakt@sielora.example</a>
+        </address>
+      </div>
+      <div>
+        <h2 class="site-footer__title">Godziny otwarcia</h2>
+        <dl class="compact-hours"><div><dt>Poniedziałek</dt><dd>nieczynne</dd></div><div><dt>Wtorek–czwartek</dt><dd>12:00–21:00</dd></div><div><dt>Piątek–sobota</dt><dd>12:00–23:00</dd></div><div><dt>Niedziela</dt><dd>12:00–20:00</dd></div></dl>
+      </div>
+      <nav aria-label="Stopka">
+        <h2 class="site-footer__title">Na skróty</h2>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="rezerwacje.html">Rezerwacje</a></li>
+          <li><a href="o-nas.html">O&nbsp;nas</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="faq.html">Najczęstsze pytania</a></li>
+          <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container site-footer__legal">
+      <p>Projekt demonstracyjny. Restauracja i&nbsp;dane kontaktowe są fikcyjne.</p>
+      <p>© 2026 SIELORA — Kuchnia Sezonowa. Logo, ilustracje i&nbsp;projekt strony przygotowano na potrzeby tego projektu.</p>
+    </div>
+  </footer>
+</body>
+</html>
